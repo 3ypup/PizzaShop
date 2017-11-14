@@ -1,8 +1,11 @@
 
+var x=1
+
 function something()
 {
 
-	alert('Hello! app.js');
+	alert(x);
+	x = x+1
 }
 
 
