@@ -1,0 +1,32 @@
+<h2>table </h2>
+
+
+
+
+
+<html>
+
+
+<div id="my"></div>
+
+<p><button id='download'>Export my spreadsheet as CSV</button></p>
+
+<script>
+$('#my').jexcel({
+    csv:'/tabel.csv',
+    csvHeaders:true,
+    colWidths: [70, 200, 300],
+});
+
+$('#download').on('click', function () {
+    $('#my').jexcel('download');
+})
+</script>
+</html>
+
+
+
+
+
+</html>
+
