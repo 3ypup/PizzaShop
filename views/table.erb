@@ -32,17 +32,21 @@
 
 
  
-<div class="row">
+
 
  <% @products.each do |product| %>
 
-  
+ 
 
- <% if product.id == 3 %>
+ <% if product.id == 1 or product.id == 4 or product.id == 7 or product.id == 10 or product.id == 13%>
+ </div>
+
 
   <div class="row">
 
-<% end %>
+  
+
+
 
     <div class="col">
      
@@ -57,7 +61,23 @@
 
     </div>
 
+<% else %>
+		
+		<div class="col">
+     
+		<a data-fancybox="gallery"   href="<%= product.path_to_photo%>">
+    	<img src="<%= product.path_to_photo%>"  style ="width: 200px">
+		</a>
+		<br/>
+		<span  class="badge badge-success"><%= product.price %></span>
+		<span  class="badge badge-warning"><%= product.title %></span><br/>
+		<button type="button" class="btn btn-danger">Add to cart</button>
+		<p><%=product.id%></p>
 
+    </div>
+
+
+<% end %>
 
     
 <% end %>
