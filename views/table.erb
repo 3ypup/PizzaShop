@@ -2,6 +2,9 @@
 
 <head>
 
+
+<button onclick="delete_to_cart()" style ="font-size: 30px" type="button" class="btn btn-danger">delete</button>
+
 </head>
 
 
@@ -32,7 +35,7 @@
 		<br/>
 		<span style ="font-size: 20px" class="badge badge-success"><%= product.price %></span>
 		<span style ="font-size: 20px" class="badge badge-warning"><%= product.title %></span><br/>
-		<button style ="font-size: 30px" type="button" class="btn btn-danger">Add to cart</button>
+		<button onclick="add_to_cart()" style ="font-size: 30px" type="button" class="btn btn-danger">Add to cart</button>
 		<br/><br/><br/><br/>
 		
 
@@ -50,7 +53,7 @@
 		<br/>
 		<span style ="font-size: 20px" class="badge badge-success"><%= product.price %></span>
 		<span  style ="font-size: 20px" class="badge badge-warning"><%= product.title %></span><br/>
-		<button style ="font-size: 30px"  type="button" class="btn btn-danger">Add to cart</button>
+		<button onclick="add_to_cart()" style ="font-size: 30px"  type="button" class="btn btn-danger">Add to cart</button>
 		<br/><br/><br/><br/>
 
 
