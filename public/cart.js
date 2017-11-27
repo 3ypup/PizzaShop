@@ -2,8 +2,14 @@ function add_to_cart(id)
 {
 
 
-alert ('you added pizza with id '+id);
+var x = window.localStorage.getItem('product_'+id);
 
+x = x*1+1
+
+
+window.localStorage.setItem('product_'+id, x)
+
+alert ('product_'+id +"=" + x);
 	
 }
 
@@ -11,15 +17,9 @@ function delete_to_cart()
 {
 
 
-var cart = window.localStorage.getItem('cart')
+localStorage.clear()
 
-
-cart = 0
-
-window.localStorage.setItem('cart', cart)
-
-alert (cart)
-
+alert ("Cart is clear!")
 
 	
 }
