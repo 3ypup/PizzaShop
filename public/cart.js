@@ -13,6 +13,20 @@ alert ('product_'+id +"=" + x);
 	
 }
 
+
+
+
+function view_the_cart()
+{
+
+
+
+
+alert("there is your cart!")
+
+
+}
+
 function delete_to_cart()
 {
 
