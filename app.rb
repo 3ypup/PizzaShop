@@ -25,6 +25,8 @@ end
 
 get '/table' do
 
+
+
 	@products = Product.order "created_at"
 
 

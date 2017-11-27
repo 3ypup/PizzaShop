@@ -23,10 +23,26 @@
 <% end %>
 
 
+
 <div class="container">
 
+
+ 
+
+
+
+ 
+<div class="row">
+
+ <% @products.each do |product| %>
+
+  
+
+ <% if product.id == 3 %>
+
   <div class="row">
-  <% @products.each do |product| %>
+
+<% end %>
 
     <div class="col">
      
@@ -37,13 +53,18 @@
 		<span  class="badge badge-success"><%= product.price %></span>
 		<span  class="badge badge-warning"><%= product.title %></span><br/>
 		<button type="button" class="btn btn-danger">Add to cart</button>
+		<p><%=product.id%></p>
 
     </div>
 
-    <% end %>
 
+
+    
+<% end %>
   
   </div>
+
+
   
 
 
