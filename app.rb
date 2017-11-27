@@ -11,6 +11,7 @@ class Product < ActiveRecord::Base
 end
 
 get "/" do
+	
 		erb " <a href=\"https://github.com/bootstrap-ruby/sinatra-bootstrap\"></a>"		
 		erb :index	
 
