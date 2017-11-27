@@ -1,16 +1,8 @@
-function add_to_cart()
+function add_to_cart(id)
 {
 
 
-var cart = window.localStorage.getItem('cart')
-
-
-cart = cart*1+1
-
-window.localStorage.setItem('cart', cart)
-
-alert (cart)
-
+alert ('you added pizza with id '+id);
 
 	
 }

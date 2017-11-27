@@ -40,7 +40,9 @@
 		<span style ="font-size: 20px" name = "price" class="badge badge-success">$<%= product.price %></span>
 		<span style ="font-size: 20px" name = "title" class="badge badge-warning"><%= product.title %></span>
 		<span style ="font-size: 20px" class="badge badge-info"><%= product.size %>cm</span><br/>
-		<button onclick="add_to_cart()" style ="font-size: 30px" type="button" class="btn btn-danger">Add to cart</button>
+		
+		<button onclick="add_to_cart(<%=product.id  %>)" style ="font-size: 30px" type="button" class="btn btn-danger">Add to cart</button>
+
 		<br/><br/><br/><br/>
 		
 
@@ -59,7 +61,10 @@
 		<span style ="font-size: 20px" name = "price" class="badge badge-success">$<%= product.price %></span>
 		<span  style ="font-size: 20px" name = "title" class="badge badge-warning"><%= product.title %></span>
 		<span style ="font-size: 20px" class="badge badge-info"><%= product.size %>cm</span><br/>
-		<button onclick="add_to_cart()" style ="font-size: 30px"  type="button" class="btn btn-danger">Add to cart</button>
+
+
+		<button onclick="add_to_cart(<%= product.id %>)" style ="font-size: 30px"  type="button" class="btn btn-danger">
+		Add to cart</button>
 		<br/><br/><br/><br/>
 
 
