@@ -1,29 +1,69 @@
-<h2>table </h2>
-
-
-
-
-
 <html>
 
+<head>
 
-<div id="my"></div>
+</head>
 
-<p><button id='download'>Export my spreadsheet as CSV</button></p>
 
-<script>
-$('#my').jexcel({
-    csv:'/tabel.csv',
-    csvHeaders:true,
-    colWidths: [70, 200, 300],
-});
+<body>
 
-$('#download').on('click', function () {
-    $('#my').jexcel('download');
-})
-</script>
-</html>
 
+<h2> table </h2>
+
+
+
+<% @products.each do |product| %>
+
+<h2> <%= product.title %> </h2>
+ <p> <%= product.price %> </p>
+ <p> <%= product.path_to_photo %> </p>
+
+<br/><br/><br/><br/>
+
+<% end %>
+
+
+<div class="container">
+
+  <div class="row">
+  <% @products.each do |product| %>
+
+    <div class="col">
+     
+		<a data-fancybox="gallery"   href="<%= product.path_to_photo%>">
+    	<img src="<%= product.path_to_photo%>"  style ="width: 200px">
+		</a>
+		<br/>
+		<span  class="badge badge-success"><%= product.price %></span>
+		<span  class="badge badge-warning"><%= product.title %></span><br/>
+		<button type="button" class="btn btn-danger">Add to cart</button>
+
+    </div>
+
+    <% end %>
+
+  
+  </div>
+  
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
 
 
 

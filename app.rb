@@ -23,4 +23,12 @@ get "/about" do
 
 end
 
+get '/table' do
+
+	@products = Product.order "created_at"
+
+
+	 erb :table
+end
+
 
