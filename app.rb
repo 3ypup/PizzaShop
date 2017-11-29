@@ -35,3 +35,7 @@ get '/table' do
 end
 
 
+post "/table" do
+	erb "Hello"
+
+end
