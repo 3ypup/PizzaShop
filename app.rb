@@ -36,6 +36,11 @@ end
 
 
 post "/table" do
+	
 	erb "Hello"
+
+	@products = Product.order "created_at"
+
+	erb :table
 
 end
