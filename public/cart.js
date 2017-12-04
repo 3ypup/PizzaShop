@@ -9,9 +9,10 @@ x = x*1+1
 
 window.localStorage.setItem(key, x)
 
-alert ('product_'+id +"=" + x);
+
 
 update_orders_input();
+update_orders_button();
 	
 }
 
@@ -41,10 +42,11 @@ for(var i = 0; i < window.localStorage.length; i++ )
 	}
 
 
+return cnt
 
 update_orders_input();
+update_orders_button();
 
-alert ("You ardered "+cnt+" pizzas!!")
 
 
 }
@@ -97,6 +99,20 @@ $('#orders_input').val(orders);
 
 }
 
+
+function update_orders_button()
+
+{
+
+var text = "Cart" + "("+ view_the_desk()+")";
+
+$('#update_orders_button').val(text);
+
+
+
+
+}
+
 function delete_to_cart()
 {
 
@@ -106,5 +122,6 @@ localStorage.clear()
 alert ("Cart is clear ")
 
 
-update_orders_input();	
+update_orders_input();
+update_orders_button();	
 }
