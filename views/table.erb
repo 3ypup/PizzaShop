@@ -70,7 +70,7 @@
 		<span style ="font-size: 20px" class="badge badge-info"><%= product.size %>cm</span><br/>
 
 
-		<button onclick = "get_orders()" onclick="add_to_cart(<%= product.id %>)" style ="font-size: 30px"  type="button" class="btn btn-danger">
+		<button  onclick="add_to_cart(<%= product.id %>)" style ="font-size: 30px"  type="button" class="btn btn-danger">
 		Add to cart</button>
 		<br/><br/><br/><br/>
 
@@ -101,7 +101,18 @@
 
 
 
+<script>
 
+
+$(function() {
+
+
+update_orders_input()
+
+
+   });
+
+</script>
 
 
 

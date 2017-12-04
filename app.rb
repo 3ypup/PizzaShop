@@ -44,3 +44,10 @@ post "/table" do
 	erb :table
 
 end
+
+
+post "/cart" do
+
+erb "CART"
+
+end
