@@ -1,5 +1,49 @@
-<h2>Welcome to PizzaShop </h2>
+<h2>Your order is ready </h2>
 
-<button type="button" onclick="something()" class="btn btn-primary">Click ME!</button>
+
+
+
+
+
+
+<table style ="width: 500px" class="table-warning">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Пицца</th>
+      <th scope="col">Кол-во</th>
+      <th scope="col">Цена</th>
+      <th scope="col">сумма</th>
+    </tr>
+  </thead>
+  <tbody>
+
+
+
+
+ <% @products.each do |product| %>
+
+    <tr>
+      <th scope="row"><%=product.id%></th>
+      <td><%=product.title%></td>
+      <td><%=@prices[product.id-1]%></td>
+      <td>$<%=product.price.to_i%></td>
+      <td>$<%=product.price.to_i*@prices[product.id-1].to_i%></td>
+		<input type = "hidden" <%=@sum +=product.price*@prices[product.id-1].to_i%> />
+    </tr>
+    <% end %>
+	<tr>
+      <th scope="row">Сумма заказа  <%=@sum%></th>
+      
+      
+    </tr>
+
+  </tbody>
+</table>
+
+
+
+
+
 
 

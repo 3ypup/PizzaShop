@@ -46,8 +46,26 @@ post "/table" do
 end
 
 
+
 post "/cart" do
 
-erb "CART"
+
+@products = Product.order "created_at"
+
+@col1 = params[:col1]
+@col2 = params[:col2]
+@col3 = params[:col3]
+@col4 = params[:col4]
+@col5 = params[:col5]
+@col6 = params[:col6]
+
+@sum = 0
+
+@prices =[@col1, @col2, @col3, @col4, @col5, @col6]
+
+
+
+erb :cart
+
 
 end
