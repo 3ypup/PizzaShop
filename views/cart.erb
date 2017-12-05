@@ -24,7 +24,7 @@
  <% @products.each do |product| %>
 
     <tr>
-      <th scope="row"><%=product.id%></th>
+      <th style ="width: 10px" scope="row"><%=product.id%></th>
       <td><%=product.title%></td>
       <td><%=@prices[product.id-1]%></td>
       <td>$<%=product.price.to_i%></td>
@@ -33,13 +33,17 @@
     </tr>
     <% end %>
 	<tr>
-      <th scope="row">Сумма заказа  <%=@sum%></th>
+      <th scope="row"></th>
+
+
       
       
     </tr>
 
   </tbody>
 </table>
+
+<span style = "font-size: 25px" class="badge badge-success">Сумма заказа  $<%=@sum%></span> 
 
 
 
